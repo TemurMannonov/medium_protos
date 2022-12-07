@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+package genproto;
+
+option go_package="genproto/user_service";
+
+message User {
+    int64 id = 1;
+    string first_name = 2;
+    string last_name = 3;
+    string phone_number = 4;
+    string email = 5;
+    string gender = 6;
+    string password = 7;
+    string username = 8;
+    string profile_image_url = 9;
+    string type = 10;
+    string created_at = 11;
+}
+
+message IdRequest {
+    int64 id = 1;
+}
+
+message GetAllUsersRequest {
+    int32 limit = 1;
+    int32 page = 2;
+    string search = 3;
+}
+
+message GetAllUsersResponse {
+    repeated User users = 1;
+    int32 count = 2;
+}
