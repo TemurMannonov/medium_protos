@@ -32,3 +32,7 @@ message GetAllUsersResponse {
     repeated User users = 1;
     int32 count = 2;
 }
+
+message GetByEmailRequest {
+    string email = 1;
+}
