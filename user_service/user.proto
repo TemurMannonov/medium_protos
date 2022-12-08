@@ -18,7 +18,7 @@ message User {
     string created_at = 11;
 }
 
-message IdRequest {
+message GetRequest {
     int64 id = 1;
 }
 
@@ -31,4 +31,8 @@ message GetAllUsersRequest {
 message GetAllUsersResponse {
     repeated User users = 1;
     int32 count = 2;
+}
+
+message GetByEmailRequest {
+    string email = 1;
 }

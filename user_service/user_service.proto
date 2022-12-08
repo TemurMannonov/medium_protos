@@ -9,8 +9,9 @@ import "google/protobuf/empty.proto";
 
 service UserService {
     rpc Create(User) returns (User) {}
-    rpc Get(IdRequest) returns (User) {}
+    rpc Get(GetRequest) returns (User) {}
     rpc GetAll(GetAllUsersRequest) returns (GetAllUsersResponse) {}
     rpc Update(User) returns (User) {}
     rpc Delete(IdRequest) returns (google.protobuf.Empty) {}
+    rpc GetByEmail(GetByEmailRequest) returns (User) {}
 }
