@@ -18,7 +18,7 @@ message User {
     string created_at = 11;
 }
 
-message GetRequest {
+message IdRequest {
     int64 id = 1;
 }
 
