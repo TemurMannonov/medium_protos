@@ -8,5 +8,5 @@ import "post.proto";
 
 service PostService {
     rpc Create(Post) returns (Post) {}
-    rpc Get(IdRequest) returns (Post) {}
+    rpc Get(GetPostRequest) returns (Post) {}
 }

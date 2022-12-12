@@ -9,3 +9,7 @@ message Category {
     string title = 2;
     string created_at = 3;
 }
+
+message GetCategoryRequest {
+    int64 id = 1;
+}

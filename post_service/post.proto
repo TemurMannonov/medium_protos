@@ -16,6 +16,6 @@ message Post {
     int32 views_count = 9;
 }
 
-message IdRequest {
+message GetPostRequest {
     int64 id = 1;
 }

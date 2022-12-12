@@ -9,5 +9,5 @@ import "post.proto";
 
 service CategoryService {
     rpc Create(Category) returns (Category) {}
-    rpc Get(IdRequest) returns (Category) {}
+    rpc Get(GetCategoryRequest) returns (Category) {}
 }
