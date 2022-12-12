@@ -8,6 +8,7 @@ import "google/protobuf/empty.proto";
 
 service AuthService {
     rpc Register(RegisterRequest) returns (google.protobuf.Empty) {}
+    rpc Verify(VerifyRegisterRequest) returns (AuthResponse) {}
 }
 
 message RegisterRequest {
@@ -16,3 +17,21 @@ message RegisterRequest {
     string email = 3;
     string password = 4;
 }
+
+message VerifyRegisterRequest {
+    string email = 1;
+    string code = 2;
+}
+
+message AuthResponse {
+    int64 id = 1;
+	string first_name = 2;
+	string last_name = 3;
+	string email = 4;
+	string username = 5;
+	string type = 6;
+	string created_at = 7;
+	string access_token = 8;
+}
+
+
