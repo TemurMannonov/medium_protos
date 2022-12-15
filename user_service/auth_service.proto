@@ -37,6 +37,8 @@ message AuthResponse {
 
 message VerifyTokenRequest {
     string access_token = 1;
+    string resource = 2;
+    string action = 3;
 }
 
 message AuthPayload {
@@ -46,6 +48,7 @@ message AuthPayload {
 	string user_type = 4;
 	string issued_at = 5;
     string expired_at = 6;
+    bool has_permission = 7;
 }
 
 
