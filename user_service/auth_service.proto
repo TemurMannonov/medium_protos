@@ -10,6 +10,7 @@ service AuthService {
     rpc Register(RegisterRequest) returns (google.protobuf.Empty) {}
     rpc Verify(VerifyRegisterRequest) returns (AuthResponse) {}
     rpc VerifyToken(VerifyTokenRequest) returns (AuthPayload) {}
+    rpc Login(LoginRequest) returns (AuthResponse) {}
 }
 
 message RegisterRequest {
@@ -49,6 +50,11 @@ message AuthPayload {
 	string issued_at = 5;
     string expired_at = 6;
     bool has_permission = 7;
+}
+
+message LoginRequest {
+    string email    = 1;
+    string password =  2;
 }
 
 
